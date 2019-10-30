@@ -4,9 +4,7 @@ import com.mainacad.helper.ConnectionHelperInfo;
 import com.mainacad.model.ConnectionInfo;
 import com.mainacad.multithreads.MultithreadWrapper;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.logging.Logger;
 
 public class ApplicationRunner {
@@ -31,6 +29,32 @@ public class ApplicationRunner {
             }
         }
         LOG.info(connectionIPList.size() + " connection were written to file");
+
+        // MAP ///////////////////////////////////////////////////////////////////////////////////////////
+
+        Map<String, String> users = new HashMap<>();
+        users.put("111", "Alex1");
+        users.put("118", "Alex8");
+        users.put("113", "Alex3");
+        users.put("114", "Alex4");
+        users.put("115", "Alex5");
+
+        users.put("111", "Nikita");
+        users.put(null, "Gleb");
+
+        System.out.println(users.toString());
+
+//        for (String key : users.keySet()) {
+//            String value = users.get(key);
+//            LOG.info("Key with " + key + " has value \"" + value + "\"");
+//        }
+
+        users.keySet().forEach(key -> LOG.info("Key with " + key + " has value \"" + users.get(key) + "\""));
+
+//        // lambda
+//        LOG.info("Result is " + (15,10));
+//        {(15, 10) ->
+
     }
 
     private static boolean threadsAlive(List<Thread> threads) {
