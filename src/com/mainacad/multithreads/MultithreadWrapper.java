@@ -23,5 +23,6 @@ public class MultithreadWrapper extends Thread {
         LOG.info(threadName + " was started!");
         FileService.writeTextToFile(connectionInfo.toString(), "multi.txt", true);
         connectionIPList.add(connectionInfo.getIp());
+        LOG.info("-----" + threadName+"----------list:" + connectionIPList.toString());
     }
 }

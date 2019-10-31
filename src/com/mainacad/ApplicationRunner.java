@@ -50,11 +50,6 @@ public class ApplicationRunner {
 //        }
 
         users.keySet().forEach(key -> LOG.info("Key with " + key + " has value \"" + users.get(key) + "\""));
-
-//        // lambda
-//        LOG.info("Result is " + (15,10));
-//        {(15, 10) ->
-
     }
 
     private static boolean threadsAlive(List<Thread> threads) {
